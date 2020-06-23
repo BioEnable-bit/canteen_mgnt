@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_transaction_history"
+        android:title="Transaction History"
+        android:icon="@drawable/ic_assignment_black_24dp"
+         />
+    <item android:id="@+id/action_sales_history"
+        android:title="Sale History"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        />
+
+    <item android:id="@+id/action_add_food"
+        android:title="Users Group"
+        android:icon="@drawable/ic_add_circle_outline_black_24dp"
+        app:showAsAction="always"/>
+
+
+
+   <!-- <item android:id="@+id/action_delete"
+        android:title="Delete"
+        android:icon="@drawable/ic_delete_white_24dp"/>
+
+    <item android:id="@+id/action_open"
+        android:title="Edit"
+        android:icon="@drawable/ic_edit_white_24dp"/>-->
+
+</menu>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Canteen Management</string>
+    <string name="btn_pay">PAY</string>
+    <string name="action_login">Login</string>
+</resources>

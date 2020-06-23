@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view_presenter.login.LoginActivity">
+
+
+       <!-- <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_uid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".8"
+            android:layout_marginTop="64dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/til_uid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            app:layout_constraintWidth_percent=".8"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+            <EditText
+                android:id="@+id/et_uid"
+                android:hint="Username"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--  </com.google.android.material.textfield.TextInputLayout>-->
+<!--
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_pswd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_uid"
+            app:layout_constraintRight_toRightOf="parent">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/til_pswd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_uid"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+            <EditText
+                android:id="@+id/et_password"
+                android:textSize="18sp"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+     <!--   </com.google.android.material.textfield.TextInputLayout>-->
+
+        <ProgressBar
+            android:id="@+id/progress_login"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/til_pswd"
+            app:layout_constraintLeft_toLeftOf="@+id/til_pswd"
+            app:layout_constraintRight_toRightOf="@+id/til_pswd"
+            android:indeterminate="true"/>
+
+        <CheckBox
+            android:id="@+id/ch_show_pswd"
+            android:text="Show password"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/til_pswd"
+            app:layout_constraintTop_toBottomOf="@+id/progress_login"/>
+
+      <!--  <TextView
+            android:id="@+id/tv_forgot"
+            android:onClick="forgot"
+            android:text="Forgot password"
+            android:textSize="16sp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/colorPrimary"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/progress_login"
+            app:layout_constraintBottom_toBottomOf="@+id/ch_show_pswd"
+            app:layout_constraintRight_toRightOf="@+id/til_pswd"/>
+-->
+        <TextView
+            android:id="@+id/btn_login"
+            android:onClick="login"
+            android:text="LOGIN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintLeft_toLeftOf="@+id/til_pswd"
+            app:layout_constraintRight_toRightOf="@+id/til_pswd"
+            app:layout_constraintTop_toBottomOf="@+id/ch_show_pswd"/>
+<!--
+
+        <TextView
+            android:id="@+id/btn_start_signup"
+            android:onClick="startSignup"
+            android:text="SIGNUP"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="64dp"
+            app:layout_constraintLeft_toLeftOf="@+id/til_pswd"
+            app:layout_constraintRight_toRightOf="@+id/til_pswd"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
